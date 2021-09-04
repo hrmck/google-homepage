@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --lightest-gray: rgb(248, 249, 250);
+            --lighter-gray: rgb(242, 242, 242);
+            --gray: rgb(218, 220, 224);
+            --darker-gray: rgb(95, 99, 104);
+            --blue: rgb(26, 115, 232);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        nav {
+            align-self: flex-end;
+            float: right;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        nav>* {
+            margin: 5px 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #sign-in {
+            background-color: var(--blue);
+            color: white;
+            font-size: 15px;
+            padding: 8px 25px;
+            border-radius: 3px;
+            border-color: var(--blue);
+        }
+
+        #sign-in:hover {
+            opacity: 0.9;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .flex-horizontal-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .material-icons {
+            color: var(--darker-gray);
+        }
+
+        main {
+            position: relative;
+            width: 50%;
+            max-width: 600px;
+            top: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #logo {
+            width: 35%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            border-color: var(--lighter-gray);
+            border-width: 1px;
+            border-radius: 50px;
+            border-style: solid;
+            height: 3em;
+            width: 100%;
+            font-size: 16px;
+            padding: 1% 10%;
+        }
+
+        input[type="text"]:hover {
+            box-shadow: 0 0 5px 2px var(--lighter-gray);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+        }
+
+        #icon-search {
+            z-index: 1;
+            margin-right: -40px;
+        }
+
+        #icon-mic {
+            margin-left: -40px;
+        }
+
+        #search-buttons {
+            margin-top: 10px;
+            justify-content: space-evenly;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #search-buttons>button {
+            background-color: var(--lightest-gray);
+            padding: 8px 15px;
+            border-style: solid;
+            border-radius: 3px;
+            border-color: var(--lightest-gray);
+        }
+
+        #search-buttons>button:hover {
+            box-shadow: 0 0 1px 1px var(--gray);
+        }
+
+        #search-buttons>button:focus {
+            box-shadow: 0 0 1px 1px var(--blue);
+        }
+
+        p {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+        }
+
+        p>a {
+            margin-left: 5px;
+            font-size: 13px;
+            color: blue;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background-color: var(--lighter-gray);
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer>div:nth-child(2) {
+            border-top: 1px solid var(--gray);
+        }
+
+        footer>div {
+            font-size: 15px;
+            color: var(--darker-gray);
+            padding: 15px 20px;
+        }
+
+        div>a {
+            padding: 10px 15px;
+            color: var(--darker-gray);
+        }
+
+        div[class="flex-horizontal-container"] {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
+        <a href="https://www.google.co.jp/imghp?hl=en&ogbl">Images</a>
+        <span class="material-icons">apps</span>
+        <button id="sign-in">Sign in</button>
+    </nav>
+    <main>
+        <img id="logo"
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/284f0cdc998be7e4751e29e8458323ad5d320303/foundations/the_front_end/project_html_css/imgs/00.png" />
+        <form id="search">
+            <span class="material-icons" id="icon-search">search</span>
+            <input type="text" />
+            <span class="material-icons" id="icon-mic">mic</span>
+        </form>
+        <div class="flex-horizontal-container" id="search-buttons">
+            <button>Foogle Search</button>
+            <button>I'm Feeling Lucky</button>
+        </div>
+        <p>Foogle offered in: <a
+                href="https://www.google.com/setprefs?sig=0_GRMQ0AcXkz65VIL_EOHIMqPhtsU%3D&hl=ja&source=homepage&sa=X&ved=0ahUKEwjF4aax9-TyAhVGA4gKHeaND7MQ2ZgBCA4">日本語</a>
+        </p>
+    </main>
+    <footer>
+        <div>
+            Japan
+        </div>
+        <div class="flex-horizontal-container">
+            <div>
+                <a>About</a>
+                <a>Advertising</a>
+                <a>Business</a>
+                <a>How Search works</a>
+            </div>
+            <div>
+                <a>Privacy</a>
+                <a>Terms</a>
+                <a>Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
